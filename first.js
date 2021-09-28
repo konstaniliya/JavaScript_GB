@@ -206,5 +206,63 @@ result = power(val,pow);
 alert('result = ' + result);
 
 
+// Домашнее задание ко третьему уроку
+
+// Задание 1
+var i = 0;
+var j = 2;
+var state = 0;
+while(i<=100)
+{
+    j = 2;
+    while(j<=i/2)
+    {
+        if(i % j == 0){
+            state++;
+        }
+        j++;
+    }
+    if(state == 0){
+        console.log(i);
+    }
+    i++;
+    state = 0;
+}
+
+// Задание 2,3 a & b
+var goods = [
+    {
+        title: "1 Good",
+        price: 100,
+        quantity: 2
+    },
+    {
+        title: "2 Good",
+        price: 500,
+        quantity: 3
+    },
+    {
+        title: "3 Good",
+        price: 1000,
+        quantity: 5
+    }
+];
+var s = 0;
+for(var i = 0; i < goods.length; i++){
+    s += goods[i].price*goods[i].quantity; 
+}
+console.log('Total is ' + s);
+
+// Задание 4
+for(var i = -1; i < 9; i++,console.log(i)){
+}
+
+// Задание 5
+var arrX = [];
+for(var i = 0; i < 20; i++){
+    arrX.push('X');
+    console.log(arrX.join(''));
+}
+
 
 
