@@ -11,22 +11,32 @@
 .products
     display: flex
     justify-content: space-around
+    margin-top: 32px
+img
+    width: 100px
 .logo
     background-color: #222222
     color: white
     display: flex
     justify-content: space-between
     padding: 25px 100px
-    margin-bottom: 50px
 .btn-cart
     background-color: white
     color: #222222
     border: none
     width: 70px
     height: 30px
-.btn-cart:hover
-    background-color: red
-    color: white
+    &:hover
+        background-color: red
+        color: white
+.btn-cart-block:hover .basketBlock
+    display: flex
+    flex-direction: column
+    position: absolute
+    background-color: gray
+    padding: 20px 100px 20px 20px
+    left: auto
+    right: 100px
 .buy-btn
     background-color: #fc9393
     color: #222222
@@ -36,3 +46,16 @@
 .buy-btn:hover
     background-color: forestgreen
     color: white
+.basketBlock
+    display: none
+.closeBtn
+    font-size: 20px
+    padding: 3px 9px 3px 9px
+    position: absolute
+    top: 0px
+    right: -44px
+    border: none
+    &:hover
+        background-color: forestgreen
+.basket-item
+    position: relative
