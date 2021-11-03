@@ -12,8 +12,7 @@
     display: flex
     justify-content: space-around
     margin-top: 32px
-img
-    width: 100px
+
 .logo
     background-color: #222222
     color: white
@@ -29,14 +28,14 @@ img
     &:hover
         background-color: red
         color: white
-.btn-cart-block:hover .basketBlock
-    display: flex
-    flex-direction: column
-    position: absolute
-    background-color: gray
-    padding: 20px 100px 20px 20px
-    left: auto
-    right: 100px
+// .btn-cart-block:hover .basketBlock
+    // display: flex
+    // flex-direction: column
+    // position: absolute
+    // background-color: gray
+    // padding: 20px 100px 20px 20px
+    // left: auto
+    // right: 100px
 .buy-btn
     background-color: #fc9393
     color: #222222
@@ -47,7 +46,13 @@ img
     background-color: forestgreen
     color: white
 .basketBlock
-    display: none
+    display: flex
+    flex-direction: column
+    position: absolute
+    background-color: gray
+    padding: 20px 100px 20px 20px
+    left: auto
+    right: 100px
 .closeBtn
     font-size: 20px
     padding: 3px 9px 3px 9px
@@ -59,3 +64,5 @@ img
         background-color: forestgreen
 .basket-item
     position: relative
+.invisible
+    display: none

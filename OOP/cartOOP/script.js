@@ -40,7 +40,7 @@ _getProducts(){
     }
 }
 class ProductItem {
-    constructor(product, img = 'img/photo1.png') {
+    constructor(product, img = 'https://via.placeholder.com/250x150/') {
         this.title = product.product_name
         this.price = product.price;
         this.id = product.id;
@@ -78,6 +78,12 @@ _getBasketProducts(){
     // console.log(this.basketGoods)
 }
 
+bottonClick(){
+    document.querySelector(".btn-cart").addEventListener('click', () => {
+        document.querySelector(this.container).classList.toggle('invisible');
+    });
+}
+
     render() {
         const block = document.querySelector(this.container);
         for (let product of this.basketGoods) {
@@ -94,7 +100,7 @@ _getBasketProducts(){
     }
 }
 class BasketItem {
-    constructor(product, img = 'img/photo1.png') {
+    constructor(product, img = 'https://via.placeholder.com/150x100/') {
         this.title = product.product_name;
         this.price = product.price;
         this.id = product.id_product;
@@ -110,9 +116,6 @@ class BasketItem {
         <button class="closeBtn" id="${this.id}" onclick=testGoods()>X</button>
         </div>`
     }
-    testGoods(){
-        console.log("Hello");
-    }
 }
 
 class Basket {
@@ -120,7 +123,7 @@ class Basket {
 
     }
     removeGoods(){
-        console.log("Hello");
+
     }
     changeGoods(){
 
@@ -128,6 +131,7 @@ class Basket {
     render(){
 
     }
+    
 }
 class ElemBasket {
     render(){
@@ -138,10 +142,8 @@ class ElemBasket {
 let list = new ProductsList();
 let basketList = new BasketList();
 list.render();
+basketList.bottonClick();
 basketList.render();
-function testGoods(){
-   let test = new Basket;
-   test.removeGoods(); 
-}
+
 // console.log(list.getSum());
 

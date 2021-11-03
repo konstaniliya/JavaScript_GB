@@ -18,10 +18,6 @@
   margin-top: 32px;
 }
 
-img {
-  width: 100px;
-}
-
 .logo {
   background-color: #222222;
   color: white;
@@ -47,21 +43,6 @@ img {
   color: white;
 }
 
-.btn-cart-block:hover .basketBlock {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: absolute;
-  background-color: gray;
-  padding: 20px 100px 20px 20px;
-  left: auto;
-  right: 100px;
-}
-
 .buy-btn {
   background-color: #fc9393;
   color: #222222;
@@ -76,7 +57,18 @@ img {
 }
 
 .basketBlock {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  background-color: gray;
+  padding: 20px 100px 20px 20px;
+  left: auto;
+  right: 100px;
 }
 
 .closeBtn {
@@ -94,5 +86,9 @@ img {
 
 .basket-item {
   position: relative;
+}
+
+.invisible {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
