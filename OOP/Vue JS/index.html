@@ -1,0 +1,32 @@
+<div class="" id="app">
+    <h1>Меня зовут {{ name }}</h1>
+    <a :href="link">Перейти в поисковик</a>
+    <h2>{{ sayHello() }}</h2>
+    <button @click="counter++">OK</button>
+    <span>{{ counter }}</span>
+    <p @mousemove="getCoordinates">Lorem ipsum dolor sit amet {{x}} / {{y}}</p>
+    <input type="text" v-model.lazy="name">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+<script>
+    const app = new Vue({
+        el: "#app",
+        data: {
+            name: "Иван",
+            counter: 0,
+            link: "https://www.google.co.uk/",
+            x:0,
+            y:0
+        },
+        methods: {
+            sayHello(){
+                return `Добрый день, ${this.name}`
+            },
+            getCoordinates(){
+                this.x = event.clientX;
+                this.y = event.clientY;
+            }
+        }
+    });
+</script>

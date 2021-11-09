@@ -146,4 +146,24 @@ basketList.bottonClick();
 basketList.render();
 
 // console.log(list.getSum());
-
+// Vue.js
+const app = new Vue({
+    el: "#searchBlock",
+    data: {
+        request: "Request...",
+        filteredGoods: []
+    },
+    methods: {
+        filter(){
+            for(item of list.goods){
+                if(item.product_name.includes("Ноу")){
+                    console.log(`Нашёл`);
+                }
+                else {
+                    console.log(`Не нашёл`);
+                }
+            }
+            console.log(`Good ${list.goods[0].product_name}`);
+        }
+    }
+});
