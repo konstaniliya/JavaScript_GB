@@ -156,14 +156,14 @@ const app = new Vue({
     methods: {
         filter(){
             for(item of list.goods){
-                if(item.product_name.includes("Ноу")){
-                    console.log(`Нашёл`);
+                if(!item.product_name.includes(document.getElementById("search1").value)){
+                    document.querySelector(`[data-id=${item.product_name.id}]`).classList.add("invisible");
                 }
                 else {
-                    console.log(`Не нашёл`);
+                    console.log(`Нашёл`);
                 }
             }
-            console.log(`Good ${list.goods[0].product_name}`);
+            
         }
     }
 });

@@ -46,25 +46,25 @@ const app = new Vue({
                     }
                 })
         },
-        filter(){
-            let regexp = new RegExp(this.userSearch,'i');
-            this.filtered = this.filtered.filter(el => regexp.test(el.product_name));
+        filter(userSearch){
+            let regexp = new RegExp(userSearch,'i');
+            this.filtered = this.products.filter(el => regexp.test(el.product_name));
         }
     },
         mounted(){
             this.getJson(`${API + this.cartUrl}`)
-                .then(data => {
-                    for(let item of data.contents){
-                        this.cartItems.push(item);
-                    }
-                });
-            this.getJson(`${API + this.catalogUrl}`)
-                .then(data => {
-                    for(let item of data){
-                        this.$data.products.push(item);
-                        this.$data.filtered.push(item);
-                    }
-                });
+            .then(data => {
+                for (let item of data.contents){
+                    this.$data.cartItems.push(item);
+                }
+            });
+        this.getJson(`${API + this.catalogUrl}`)
+            .then(data => {
+                for (let item of data){
+                    this.$data.products.push(item);
+                    this.$data.filtered.push(item);
+                }
+            });
             // this.getJson(`getProducts.json`)
             //     .then(data => {
             //         for(let item of data) {

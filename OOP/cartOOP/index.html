@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/344b3986e1.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <!-- <script src="https://kit.fontawesome.com/344b3986e1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script> -->
     <title>Electronic shop</title>
 </head>
 
@@ -18,8 +18,8 @@
 
             <div id="searchBlock">
                 <form action="#">
-                    <input type="text" placeholder="U'r search request" class="searchArea" @input="filter()">
-                        <button class="searchBtn" @click="filter()">
+                    <input type="text" placeholder="U'r search request" class="searchArea" @input="filter()" id="search1">
+                        <button class="searchBtn" @input="filter()">
                             <i class="fas fa-search"></i>
                         </button>
                 </form>

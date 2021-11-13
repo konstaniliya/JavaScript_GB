@@ -18,6 +18,33 @@
   margin-top: 32px;
 }
 
+.btn-search {
+  background-color: #222222;
+  border: none;
+  color: white;
+}
+
+.cart-block {
+  background-color: beige;
+  padding: 10px;
+  width: 140px;
+  position: absolute;
+  top: 80px;
+  right: 60px;
+}
+
+.product-desc {
+  color: #222222;
+}
+
+.right-block {
+  color: #222222;
+}
+
+.cart-item {
+  margin-bottom: 10px;
+}
+
 .logo {
   background-color: #222222;
   color: white;
@@ -49,6 +76,14 @@
   border: none;
   width: 70px;
   height: 30px;
+}
+
+.del-btn {
+  background-color: #fc9393;
+  color: #222222;
+  border: none;
+  width: 15px;
+  height: 15px;
 }
 
 .buy-btn:hover {
