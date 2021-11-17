@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/344b3986e1.js" crossorigin="anonymous"></script>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Main page</title>
+</head>
+
+<body>
+<div class="wrapper"  id="app">
+  <div class="top">
+<header>
+  <div class="frontHeader">
+    <div class="container frontMenu">
+      <div class="leftMenu">
+        <a href="index.html" class="led1"><img src="img/logo.svg" alt="logo">
+        </a>
+        <details class="searchEngine">
+          <summary><img src="img/search.svg" alt="search"></summary>
+          <div class="formCatalog">
+            <form class="subscriptionForm" action="index.html" method="post">
+              <label>
+                <input type="text" placeholder="Enter Your request" class="searchArea">
+              </label>
+              <button type="submit" name="button" class="buttonCatalog">Search</button>
+            </form>
+          </div>
+        </details>
+
+      </div>
+      <div class="rightMenu">
+        <ul class="rightMenuList">
+          <li class="newList-bar">
+            
+            <img src="img/bars.svg" alt="logo" class="led2">
+            <div class="mega-box">
+              <div class="menu-item">
+                <a href="index.html"><img src="img/littlecross.svg" alt="close" class="closeImg"></a>
+                <h2 class="mega-heading">Menu</h2>
+                <h3 class="mega-heading-details">Man</h3>
+                <a class="mega-link" href="#">Accessories</a>
+                <a class="mega-link" href="#">Bags</a>
+                <a class="mega-link" href="#">Denim</a>
+                <a class="mega-link" href="#">T-Shirts</a>
+                <h3 class="mega-heading-details">Woman</h3>
+                <a class="mega-link" href="#">Accessories</a>
+                <a class="mega-link" href="#">Jackets & Coats</a>
+                <a class="mega-link" href="#">Polos</a>
+                <a class="mega-link" href="#">T-Shirts</a>
+                <a class="mega-link" href="#">Shirts</a>
+                <h3 class="mega-heading-details">Kids</h3>
+                <a class="mega-link" href="#">Accessories</a>
+                <a class="mega-link" href="#">Jackets & Coats</a>
+                <a class="mega-link" href="#">Polos</a>
+                <a class="mega-link" href="#">T-Shirts</a>
+                <a class="mega-link" href="#">Shirts</a>
+                <a class="mega-link" href="#">Bags</a>
+              </div>
+            </div>
+          </li>
+          <li class="newList-user"><a href="Registration.html" class="led2"><img src="img/user.svg" alt="logo"
+                                                                          class="userImg"></a>
+            <div class="mega-box">
+              <div class="menu-item">
+                <a href="index.html"><img src="img/littlecross.svg" alt="close" class="closeImg"></a>
+                <h2 class="mega-heading">Menu</h2>
+                <h3 class="mega-heading-details">Man</h3>
+                <a class="mega-link" href="#">Accessories</a>
+                <a class="mega-link" href="#">Bags</a>
+                <a class="mega-link" href="#">Denim</a>
+                <a class="mega-link" href="#">T-Shirts</a>
+                <h3 class="mega-heading-details">Woman</h3>
+                <a class="mega-link" href="#">Accessories</a>
+                <a class="mega-link" href="#">Jackets & Coats</a>
+                <a class="mega-link" href="#">Polos</a>
+                <a class="mega-link" href="#">T-Shirts</a>
+                <a class="mega-link" href="#">Shirts</a>
+                <h3 class="mega-heading-details">Kids</h3>
+                <a class="mega-link" href="#">Accessories</a>
+                <a class="mega-link" href="#">Jackets & Coats</a>
+                <a class="mega-link" href="#">Polos</a>
+                <a class="mega-link" href="#">T-Shirts</a>
+                <a class="mega-link" href="#">Shirts</a>
+                <a class="mega-link" href="#">Bags</a>
+              </div>
+            </div>
+          </li>
+          <li class="newList-last">
+            <button class="btn-cart" type="button" @click="showCart = !showCart">
+              <i class="fas fa-shopping-cart"></i>
+            </button>
+                <cart :cart-items="cartItems"
+                :img="imgCart" 
+                :visibility="showCart"
+                @remove="remove"></cart>    
+          </li>
+        </ul>
+
+
+      </div>
+    </div>
+  </div>
+</header>
+
+  <div class="logo">
+    <div class="container logoContent">
+      <div class="logoImage">
+        <img src="img/LogoMan.png" class="logoMan" alt="logoMan">
+      </div>
+      <div class="brandTextContent">
+        <div class="mainText">
+          <p class="textHeaderLogo">
+            the brand
+          </p>
+          <p class="text">
+            of luxerious <span class="pinkText">
+              fashion
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <h3 class="hiddenHeader">New brand colletions</h3>
+    <div class="cardsHead container">
+      <div class="card">
+        <a href="catalog.html"><img src="img/Group36.jpg" class="img1" alt="For Women"></a>
+        <p class="textCard">
+          30% off
+          <br>
+          <span class="pinkText">
+            for women
+          </span>
+        </p>
+      </div>
+
+      <div class="card">
+        <a href="catalog.html"><img src="img/Group37.jpg" class="img1" alt="For Men"></a>
+        <p class="textCard">
+          hot deal
+          <br>
+          <span class="pinkText">
+            for men
+          </span>
+        </p>
+      </div>
+      <div class="card">
+        <a href="catalog.html"><img src="img/Group38.jpg" class="img1" alt="For kids"></a>
+        <p class="textCard">
+          new arrivals
+          <br>
+          <span class="pinkText">
+            for kids
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="cardsBottom container">
+
+      <a href="catalog.html"><img src="img/Group39.png" alt="Accesories" class="img2"></a>
+      <div class="downText">
+        <span class="text whiteBig">
+          luxirous & trendy
+        </span>
+        <br>
+        <p class="pinkText">
+          accsesories
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="header container">
+      <h1 class="blackText">
+        Fetured Items
+      </h1>
+      <p class="greyText">
+        Shop for items based on what featured in this week
+      </p>
+    </div>
+
+      <!-- <div class="cardGood">
+        <a href="card.html" class="cardLink">
+          <img src="img/cat1.png" class="catalogImage" alt="card1">
+        </a>
+          <div class="add-box">
+            <a class="add" href="shoppingCart.html">
+              <img src="img/pinkBasket.svg" alt="Add to basket" class="basketImage">
+              <p class="textInfo">Add to Cart</p>
+            </a>
+          </div>
+          <div class="catalogContent">
+            <h2 class="headerCatalog CardCatalogPage">
+              Ellery x m'o capsule
+            </h2>
+            <p class="textCatalog">
+              Known for her sculptural takes on traditional tailoring, Autralian arbiter of cool Kym Ellery
+              teams up with
+              Moda
+              operandi
+            </p>
+            <p class="priceText">
+              $52.00
+            </p>
+          </div>
+      </div>
+      <div class="cardGood">
+        <a href="card.html" class="cardLink">
+          <img src="img/cat2.png" alt="card2" class="catalogImage">
+        </a>
+          <div class="add-box">
+            <a class="add" href="shoppingCart.html">
+              <img src="img/pinkBasket.svg" alt="Add to basket" class="basketImage">
+              <p class="textInfo">Add to Cart</p>
+            </a>
+          </div>
+          <div class="catalogContent">
+            <h2 class="headerCatalog CardCatalogPage">
+              Ellery x m'o capsule
+            </h2>
+            <p class="textCatalog">
+              Known for her sculptural takes on traditional tailoring, Autralian arbiter of cool Kym Ellery
+              teams up with
+              Moda
+              operandi
+            </p>
+            <p class="priceText">
+              $52.00
+            </p>
+          </div>
+      </div>
+      <div class="cardGood">
+        <a href="card.html" class="cardLink">
+          <img src="img/cat3.png" alt="card3" class="catalogImage">
+        </a>
+          <div class="add-box">
+            <a class="add" href="shoppingCart.html">
+              <img src="img/pinkBasket.svg" alt="Add to basket" class="basketImage">
+              <p class="textInfo">Add to Cart</p>
+            </a>
+          </div>
+          <div class="catalogContent">
+            <h2 class="headerCatalog CardCatalogPage">
+              Ellery x m'o capsule
+            </h2>
+            <p class="textCatalog">
+              Known for her sculptural takes on traditional tailoring, Autralian arbiter of cool Kym Ellery
+              teams up with
+              Moda
+              operandi
+            </p>
+            <p class="priceText">
+              $52.00
+            </p>
+          </div>
+      </div>
+      <div class="cardGood">
+        <a href="card.html" class="cardLink">
+          <img src="img/cat4.png" alt="card4" class="catalogImage">
+        </a>
+          <div class="add-box">
+            <a class="add" href="shoppingCart.html">
+              <img src="img/pinkBasket.svg" alt="Add to basket" class="basketImage">
+              <p class="textInfo">Add to Cart</p>
+            </a>
+          </div>
+          <div class="catalogContent">
+            <h2 class="headerCatalog CardCatalogPage">
+              Ellery x m'o capsule
+            </h2>
+            <p class="textCatalog">
+              Known for her sculptural takes on traditional tailoring, Autralian arbiter of cool Kym Ellery
+              teams up with
+              Moda
+              operandi
+            </p>
+            <p class="priceText">
+              $52.00
+            </p>
+          </div>
+      </div>
+      <div class="cardGood">
+        <a href="card.html" class="cardLink">
+          <img src="img/cat5.png" alt="card5" class="catalogImage">
+        </a>
+          <div class="add-box">
+            <a class="add" href="shoppingCart.html">
+              <img src="img/pinkBasket.svg" alt="Add to basket" class="basketImage">
+              <p class="textInfo">Add to Cart</p>
+            </a>
+          </div>
+          <div class="catalogContent">
+            <h2 class="headerCatalog CardCatalogPage">
+              Ellery x m'o capsule
+            </h2>
+            <p class="textCatalog">
+              Known for her sculptural takes on traditional tailoring, Autralian arbiter of cool Kym Ellery
+              teams up with
+              Moda
+              operandi
+            </p>
+            <p class="priceText">
+              $52.00
+            </p>
+          </div>
+      </div>
+      <div class="cardGood">
+        <a href="card.html" class="cardLink">
+          <img src="img/cat6.png" alt="card6" class="catalogImage">
+        </a>
+          <div class="add-box">
+            <a class="add" href="shoppingCart.html">
+              <img src="img/pinkBasket.svg" alt="Add to basket" class="basketImage">
+              <p class="textInfo">Add to Cart</p>
+            </a>
+          </div>
+          <div class="catalogContent">
+            <h2 class="headerCatalog CardCatalogPage">
+              Ellery x m'o capsule
+            </h2>
+            <p class="textCatalog">
+              Known for her sculptural takes on traditional tailoring, Autralian arbiter of cool Kym Ellery
+              teams up with
+              Moda
+              operandi
+            </p>
+            <p class="priceText">
+              $52.00
+            </p>
+          </div>
+      </div> -->
+      <products :products="filtered" @add-product="addProduct"></products>
+  </section>
+
+  <div class="BrowseButton container">
+    <a href="catalog.html" class="textButton" target="_blank">
+      <h2 class="buttonText">
+        Browse All Product
+      </h2>
+    </a>
+  </div>
+
+  <div class="infoBlock">
+    <div class="addInfo container">
+      <div class="delivery">
+        <img src="img/vehicle.svg" alt="delivery" class="imgLittle--lorry">
+        <h2 class="textWhite">
+          Free Delivery
+        </h2>
+        <p class="textInfo">
+          Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+        </p>
+      </div>
+      <div class="sales">
+        <img src="img/crown.png" alt="delivery" class="imgLittle">
+        <h2 class="textWhite">
+          Sales & discounts
+        </h2>
+        <p class="textInfo">
+          Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+        </p>
+      </div>
+      <div class="quality">
+        <img src="img/Forma.png" alt="delivery" class="imgLittle">
+        <h2 class="textWhite">
+          Quality assurance
+        </h2>
+        <p class="textInfo">
+          Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="subscription">
+    <div class="subscriptionContent container">
+      <figure>
+        <div class="helloImage">
+          <img src="img/Intersect.png" alt="hello image" class="imgHello">
+            <h2 class="textHello">
+              “Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“
+            </h2>
+        </div>
+      </figure>
+      <div class="form">
+        <h2 class="textSubscription">
+          <span class="boldText">SUBSCRIBE</span> <br> FOR OUR NEWLETTER AND PROMOTION
+        </h2>
+        <form class="subscriptionForm" action="index.html" method="post">
+          <label>
+            <input type="email" placeholder="Enter Your Email" class="emailArea">
+          </label>
+          <button type="submit" name="button" class="button">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+  <footer>
+    <div class="footerContent container">
+      <div class="rights">
+        <p class="footerText">
+          © 2021 Brand All Rights Reserved.
+        </p>
+      </div>
+      <div class="socialNetworks">
+        <a href="" class="socialCards">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="socialCards">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="socialCards">
+          <i class="fab fa-pinterest-p"></i>
+        </a>
+        <a href="" class="socialCards">
+          <i class="fab fa-twitter"></i>
+        </a>
+        
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+<script src="https://kit.fontawesome.com/344b3986e1.js" crossorigin="anonymous"></script>
+<script src="JS/cartComponent.js"></script>
+<script src="JS/filterComponent.js"></script>
+<script src="JS/ProductComponent.js"></script>
+<script src="JS/script.js"></script>
+</body>
+
+</html>
