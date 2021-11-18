@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+.inform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+}
+
+.inputField {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 32px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 2px solid #cbb0f7;
+}
+
+p {
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 32px;
+}
+
+form {
+  background-color: #fdc6b6;
+  width: 500px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e39bff), to(#2b96fa));
+  background: linear-gradient(#e39bff, #2b96fa);
+}
+
+.inputFieldBotton {
+  margin-bottom: 32px;
+  margin-left: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  border: 2px solid #cbb0f7;
+}
+
+.redErrorBorder {
+  border: 2px solid red;
+}
+
+.greenBorder {
+  border: 2px solid forestgreen;
+}
+/*# sourceMappingURL=style.css.map */

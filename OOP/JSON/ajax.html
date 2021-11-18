@@ -1,0 +1,7 @@
+<script>
+    fetch("https://www.cbr-xml-daily/daily_json.js")
+    .then(text => text.json())
+    .then(data => {
+        console.log(data);
+    })
+</script>

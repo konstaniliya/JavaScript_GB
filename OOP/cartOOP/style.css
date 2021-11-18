@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Lato, serif;
+  font-style: normal;
+  font-weight: normal;
+  outline-style: none;
+  -webkit-transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 32px;
+}
+
+.logo {
+  background-color: #222222;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 25px 100px;
+}
+
+.btn-cart {
+  background-color: white;
+  color: #222222;
+  border: none;
+  width: 70px;
+  height: 30px;
+}
+
+.btn-cart:hover {
+  background-color: red;
+  color: white;
+}
+
+.buy-btn {
+  background-color: #fc9393;
+  color: #222222;
+  border: none;
+  width: 70px;
+  height: 30px;
+}
+
+.buy-btn:hover {
+  background-color: forestgreen;
+  color: white;
+}
+
+.basketBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  background-color: gray;
+  padding: 20px 100px 20px 20px;
+  left: auto;
+  right: 100px;
+}
+
+.closeBtn {
+  font-size: 20px;
+  padding: 3px 9px 3px 9px;
+  position: absolute;
+  top: 0px;
+  right: -44px;
+  border: none;
+}
+
+.closeBtn:hover {
+  background-color: forestgreen;
+}
+
+.basket-item {
+  position: relative;
+}
+
+.invisible {
+  display: none;
+}
+
+.searchArea {
+  border-radius: 4px;
+  border: none;
+  padding: 5px 10px 5px 5px;
+}
+
+.searchBtn {
+  background: none;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-size: 20px;
+  margin-left: 5px;
+}
+/*# sourceMappingURL=style.css.map */

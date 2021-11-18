@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let userJson = '{"name":"Petr","age":25,"isAdmin":"true"}';
+        let user = JSON.parse(userJson);
+        console.log(user);
+        user.dateCreated = '2021-10-28';
+        user.address = {
+            city: 'Москва',
+            postalCode: '410258'
+        }
+        console.log(user);
+        let user2 = JSON.stringify(user,null,4);
+        // console.log(user2);
+        let user3 = JSON.parse(user2,(key,value)=>{
+            if(key == 'dateCreated'){
+                value = new Date(value);
+            }
+            return value;
+        });
+        // console.log(user3);
+    
+    </script>
+</body>
+</html>
+
