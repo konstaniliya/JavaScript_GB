@@ -1,9 +1,9 @@
-Vue.component('filter', {
-data () {
-    return {
-    userSearch: ''
-    }
-},
+Vue.component('filter1', {
+  data () {
+      return {
+        userSearch: ''
+      }
+    },
     template:
         `<form action="#" class="search-form" @submit.prevent="$parent.filter(userSearch)">
             <input type="text" class="search-field" v-model="userSearch">
