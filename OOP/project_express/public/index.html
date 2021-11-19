@@ -94,12 +94,12 @@
           </li>
           <li class="newList-last">
             <button class="btn-cart" type="button" @click="showCart = !showCart">
-              <i class="fas fa-shopping-cart"></i>
+              <img src="img/basket.svg" alt="">
             </button>
-                <cart :cart-items="cartItems"
-                :img="imgCart" 
+                <cart :cart-items="cartItems" 
                 :visibility="showCart"
-                @remove="remove"></cart>    
+                @remove="remove"
+                >Cart</cart>   
           </li>
         </ul>
 

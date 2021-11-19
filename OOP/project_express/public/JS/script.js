@@ -55,12 +55,14 @@ const app = new Vue({
             this.getJson(`${API + this.cartUrl}`)
             .then(data => {
                 for (let item of data.contents){
+                    item.img_path = `img/card${item.id_product}.png`;
                     this.$data.cartItems.push(item);
                 }
             });
         this.getJson(`${API + this.catalogUrl}`)
             .then(data => {
                 for (let item of data){
+                    item.img_path = `img/card${item.id_product}.png`;
                     this.$data.products.push(item);
                     this.$data.filtered.push(item);
                 }

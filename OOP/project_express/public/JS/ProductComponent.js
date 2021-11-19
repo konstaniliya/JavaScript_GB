@@ -4,21 +4,13 @@ Vue.component('products', {
             `<div class="catalog container">
                 <product v-for="item of products"
                 :key="item.id_product"
-                :img="item.img_product"
+                :img="item.img_path"
                 :product="item"></product>
             </div>`
 });
 Vue.component('product', {
     props: ['product','img'],
     template:
-        // `<div class="product-item">
-        //             <img :src="img" alt="some img">
-        //             <div class="desc">
-        //                 <h3>{{product.product_name}}</h3>
-        //                 <p>{{product.price}}</p>
-        //                 <button class="buy-btn" @click="$root.addProduct(product)">Купить</button>
-        //             </div>
-        // </div>`
         `<div class="cardGood">
         <a href="card.html" class="cardLink">
           <img :src="img" class="catalogImage" alt="card1">

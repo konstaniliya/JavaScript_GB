@@ -640,6 +640,28 @@ header {
   transition: transform 0.3s, box-shadow 0.3s, color 0.1s, rotate 0.3s, background-color 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
 }
 
+.buy-btn {
+  border: 3px solid #ff788f;
+  border-radius: 10px;
+  background: none;
+  padding: 5px;
+}
+
+.buy-btn:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.del-btn {
+  background-color: #ff788f;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+  font-size: 12px;
+  border: none;
+}
+
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -1382,11 +1404,14 @@ footer {
   right: 60px;
 }
 
+.cartImg {
+  width: 140px;
+}
+
 .btn-cart {
   background-color: #222222;
   border: none;
   color: white;
-  font-size: 34px;
 }
 
 .last:hover .mega-box {
@@ -1817,13 +1842,6 @@ summary:focus {
 }
 
 /*Down here, working offline sometimes*/
-@font-face {
-  font-family: 'Lato';
-  src: url("fonts/Lato-Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-
 @media (max-width: 1100px) {
   .downText {
     -webkit-transform: scale(0.7);
