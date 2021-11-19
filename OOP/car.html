@@ -1,0 +1,37 @@
+<script>
+    class Car{
+        constructor(title, price){
+            this.title = title;
+            this.price = price;
+        }
+    }
+    class Factory{
+        createCar(title){
+            let car = new Car(title, parseInt(Math.random()*4000 + 1000));
+            return car;
+        }
+    }
+    class Order{
+        constructor(n){
+            this.count = n;
+            this.cars = [];
+            this.sumOrder = 0;
+            this.createOrder();
+            this.show();
+        }
+        createOrder(){
+            let marki = ['VW','Skoda','Audi'];
+            let factory = new Factory();
+            for(let i = 0;i < this.count;i++){
+                this.cars.push(factory.createCar(marki[parseInt(Math.random() * marki.length)]));
+                this.sumOrder += this.cars[i].price;
+            }
+        }
+        show(){
+            console.log(this.cars);
+            this.cars.forEach(car => console.log(`${car.title} стоит ${car.price}`));
+            console.log(`Общая стоимость всех авто составляет ${this.sumOrder.toFixed(2)}`);
+        }
+    }
+    let order = new Order(Math.random() * 40 + 10);
+</script>

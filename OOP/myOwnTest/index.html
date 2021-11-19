@@ -1,0 +1,32 @@
+<script>
+
+class Person{
+    constructor(name,year,profession){
+        this.name = name;
+        this.year = year;
+        this.profession = profession;
+    }
+    getAge(){
+        let age = new Date().getFullYear() - this.year;
+        return age;
+    }
+    showInfo(){
+        console.log(`Субъекта зовут ${this.name}, родился в ${this.year}, полных лет ${this.getAge()}, работает ${this.profession}`);
+    }
+
+}
+
+let man1 = new Person("Ivan",1921,"Teacher");
+console.log(man1.getAge());
+man1.showInfo();
+
+
+
+
+
+
+
+
+
+
+</script>
